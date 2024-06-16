@@ -1,0 +1,61 @@
+// Use DBML to define your database structure
+// Docs: https://dbml.dbdiagram.io/docs
+
+Table Barbeiro {
+  emailBarbeiro char(50) pk
+  nome char(50)
+notaMedia  float(1,2)
+}
+
+Table Cliente{
+  emailCliente char(50) pk
+  nome char(50)
+dataNascimento date
+telefone int(15)
+}
+
+Table Gerente {
+  emailGerente char(50) pk
+  nome char(50)
+}
+
+Table Cupom {
+  codigoCupom char(10)
+desconto float
+dataFim timestamp
+gerente varchar(255) 
+}
+
+Table Servico_Agenda {
+  data_marcada date
+  cliente varchar(255)
+  barbeiro varchar(255)
+  feedback varchar(255)
+  servico varchar(255)
+  cupom varchar(255)
+}
+
+Table Feedback  {
+codigoFeedback int
+nota float(1,2)
+comentario varchar (300)
+}
+
+Table Servico {
+  codigo_servico varchar(255) pk
+  descricao varchar(255)
+  preco double
+  
+}
+
+Ref: "Servico"."codigo_servico" < "Servico_Agenda"."servico"
+
+Ref: "Cliente"."emailCliente" < "Servico_Agenda"."cliente"
+
+Ref: "Feedback"."codigoFeedback" < "Servico_Agenda"."feedback"
+
+Ref: "Barbeiro"."emailBarbeiro" < "Servico_Agenda"."barbeiro"
+
+Ref: "Gerente"."emailGerente" < "Cupom"."gerente"
+
+Ref: "Cupom"."codigoCupom" < "Servico_Agenda"."cupom"

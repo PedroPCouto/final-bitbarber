@@ -1,0 +1,37 @@
+.cupom-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 200px;
+    margin: 5px;
+
+}
+
+.cupom-card:hover {
+    border: 1px solid #ff6f00;
+    cursor: pointer;
+}
+
+
+
+.cupom-card-selected{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 200px;
+    border: 1px solid #ff6f00;
+    margin: 5px;
+}
+
+.cupom-card-selected:hover{
+    cursor: pointer;
+}

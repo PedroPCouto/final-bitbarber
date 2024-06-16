@@ -1,0 +1,11 @@
+.apointment-card {
+    border: 1px solid #bebbbb;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+}
+
+.apointment-card:hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
+}

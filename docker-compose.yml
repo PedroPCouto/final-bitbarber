@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: ./src/front
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"  
+    depends_on:
+      - backend
+
+  backend:
+    build:
+      context: ./src/back/bitbarber-api
+      dockerfile: Dockerfile
+    environment:
+      - DB_HOST=db
+      - DB_PORT=5432
+      - DB_USER=myuser
+      - DB_PASSWORD=mysecretpassword
+      - DB_NAME=dbbarbershop
+    ports:
+      - "8080:8080"  
+    depends_on:
+      - db
+
+  db:
+    image: postgres:15
+    environment:
+      - POSTGRES_USER=myuser
+      - POSTGRES_PASSWORD=mysecretpassword
+      - POSTGRES_DB=dbbarbershop
+    ports:
+      - "5432:5432" 
+    volumes:
+      - db_data:/var/lib/postgresql/data  
+
+volumes:
+  db_data:

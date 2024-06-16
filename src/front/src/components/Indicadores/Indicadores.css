@@ -1,0 +1,14 @@
+.master-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.indicadores {
+    background-color: red;
+    padding: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
