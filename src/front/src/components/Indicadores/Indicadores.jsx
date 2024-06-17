@@ -17,7 +17,7 @@ const Indicadores = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:8080/cliente/getQuantidadeClientesPorMes', {
+        fetch('http://18.217.70.108:8080/cliente/getQuantidadeClientesPorMes', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -28,7 +28,7 @@ const Indicadores = () => {
             })
         })
 
-        fetch('http://localhost:8080/apointment/obterQuantidadeServicosPorFeedback', {
+        fetch('http://18.217.70.108:8080/apointment/obterQuantidadeServicosPorFeedback', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -39,7 +39,7 @@ const Indicadores = () => {
             })
         })
 
-        fetch('http://localhost:8080/cupom/obterCuponsPorStatus', {
+        fetch('http://18.217.70.108:8080/cupom/obterCuponsPorStatus', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -50,7 +50,7 @@ const Indicadores = () => {
             })
         })
 
-        fetch('http://localhost:8080/apointment/getQuantidadeServicosPorMes', {
+        fetch('http://18.217.70.108:8080/apointment/getQuantidadeServicosPorMes', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

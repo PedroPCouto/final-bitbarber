@@ -48,7 +48,7 @@ const CupomManager = () => {
                 dataCupom,
                 selectedUsers
             }
-            fetch('http://localhost:8080/cupom/createCupom', {
+            fetch('http://18.217.70.108:8080/cupom/createCupom', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -70,7 +70,7 @@ const CupomManager = () => {
     useEffect(() => {
         if(daySpan === null) return;
 
-        fetch(`http://localhost:8080/cliente/getClientesAusentes?days=${daySpan}`, {
+        fetch(`http://18.217.70.108:8080/cliente/getClientesAusentes?days=${daySpan}`, {
         }).then(response => {
             response.json().then(data => {
                 setUserData(data);

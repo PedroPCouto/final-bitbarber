@@ -10,7 +10,7 @@ const Feedback = () => {
     const sendFeedback = (e) => {
         e.preventDefault();
         const avaliacao = parseInt(document.querySelector('input[name="rate"]:checked').value);
-        fetch('http://localhost:8080/feedback/createNewFeedback', {
+        fetch('http://18.217.70.108:8080/feedback/createNewFeedback', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

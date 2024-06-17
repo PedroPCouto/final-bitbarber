@@ -12,12 +12,12 @@ const Home = () => {
 
   useEffect(() => {
     if(isLoggedIn === true){
-        fetch(`http://localhost:8080/apointment/getNewApointments?clientId=${user.email}`).then(response => {
+        fetch(`http://18.217.70.108:8080/apointment/getNewApointments?clientId=${user.email}`).then(response => {
           response.json().then(data => {
             setnewApointments(data);
           });
         })
-        fetch(`http://localhost:8080/apointment/getPastApointments?clientId=${user.email}`).then(response => {
+        fetch(`http://18.217.70.108:8080/apointment/getPastApointments?clientId=${user.email}`).then(response => {
           response.json().then(data => {
             setpastApointments(data);
           });

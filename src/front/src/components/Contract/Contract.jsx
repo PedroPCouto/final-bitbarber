@@ -55,7 +55,7 @@ const Contract = () => {
 
     useEffect(() => {
         if(dadosIniciais === null){
-            fetch(`http://localhost:8080/barbeiro/getAll`, {
+            fetch(`http://18.217.70.108:8080/barbeiro/getAll`, {
                 method: 'GET'
             }).then(response => {
                 response.json().then(data => {
@@ -65,7 +65,7 @@ const Contract = () => {
         }
 
         if(user !== null){
-            fetch(`http://localhost:8080/cupom/getCuponsByCliente?email=${user.email}`, {
+            fetch(`http://18.217.70.108:8080/cupom/getCuponsByCliente?email=${user.email}`, {
                 method: 'GET'
             }).then(response => {
                 response.json().then(data => {
@@ -76,7 +76,7 @@ const Contract = () => {
 
 
         if(date !== '' && barbeiro !== ''){
-            fetch(`http://localhost:8080/apointment/getForScheduling?data=${date}&barbeiro=${barbeiro}`, {
+            fetch(`http://18.217.70.108:8080/apointment/getForScheduling?data=${date}&barbeiro=${barbeiro}`, {
                 method: 'GET'
             }).then(response => {
                 response.json().then(data => {
@@ -89,7 +89,7 @@ const Contract = () => {
 
     const realizarAgendamento = () => {
         const horarioNumber = parseInt(horario);
-        fetch(`http://localhost:8080/apointment/createNewApointment`, {
+        fetch(`http://18.217.70.108:8080/apointment/createNewApointment`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
