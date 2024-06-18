@@ -35,7 +35,6 @@ const Login = () => {
             }
             response.json().then(data => {
                 login(data.infos);
-                alert(data.message);
                 backHome();
             })
         })

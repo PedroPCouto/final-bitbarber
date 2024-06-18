@@ -2,6 +2,7 @@ import './Feedback.css'
 
 import React, { useContext } from 'react';
 import { FeedbackContext } from '../../FeedbackContextProvider/FeedbackContextProvider';
+import Navbar from '../Navbar/navbar';
 
 const Feedback = () => {
 
@@ -30,9 +31,11 @@ const Feedback = () => {
     }
 
     return (
+        <>
+        <Navbar/>
         <div className='feedback-container'>
-            <h2>Dê seu Feedback</h2>
-            <form>
+            <h2 className='color-white-style'>Dê seu Feedback</h2>
+            <form className='feedback-form-container'>
             <div className="rate">
                 <input type="radio" id="star5" name="rate" value="5" />
                 <label htmlFor="star5" title="text">5 stars</label>
@@ -49,6 +52,7 @@ const Feedback = () => {
             <button className='feedback-button' onClick={sendFeedback}>Enviar</button>
             </form>
         </div>
+        </>
     );
 }
 

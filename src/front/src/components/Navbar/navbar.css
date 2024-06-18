@@ -8,11 +8,13 @@ li {
 
 .navbar-list-item {
     border-radius: 10px;
-    margin-left: 1rem;
-    padding: 0.8rem;
     color: white;
 
 }
+
+.navbar-utils-container {
+    display: flex;
+  }
 
 .navbar-list-item:hover {
     background-color: white;
@@ -28,24 +30,23 @@ li {
     background: linear-gradient(90deg, rgba(7,7,44,1) 0%, rgba(41,11,85,1) 100%);
     justify-content: space-between;
     align-items: center;
+    gap: 10px;
+
 }
 
-.login-button {
-    margin-right: 2rem;
+.navbar-list-item {
+    padding: 10px;
+
 }
+
+.login-register-container {
+    display: flex;
+    gap: 15px;
+}
+
+
 
 a {
 
     text-decoration: none;
-}
-
-navbar-list-item {
-    color: white;
-    padding: 0.8rem;
-}
-
-navbar-list-item:hover {
-    color: black;
-    transition: 0.5s;
-
 }

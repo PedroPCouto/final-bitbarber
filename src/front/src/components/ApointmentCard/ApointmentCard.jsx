@@ -5,12 +5,12 @@ import { FeedbackContext } from '../../FeedbackContextProvider/FeedbackContextPr
 
 
 
-const ApointmentCard = ({data, descricao}) => {
+const ApointmentCard = ({data, path}) => {
     let navigate = useNavigate();
     const {setServicoAgendaId} = useContext(FeedbackContext);
     const giveFeedback = () => {
         setServicoAgendaId(data.codigoServicoAgendado)
-        navigate('/feedback');
+        navigate(path);
     }
 
     return (

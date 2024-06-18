@@ -85,7 +85,9 @@ const CupomManager = () => {
     }
 
     return (<>
+    <div className="body-cupom-manager">
     <Navbar/>
+    
     <div className="cupom-cliente-selector">
         <h3 className='selection-per-date' onClick={selectTimeSpan}>30 dias</h3>
         <h3 className='selection-per-date' onClick={selectTimeSpan}>60 dias</h3>
@@ -117,7 +119,7 @@ const CupomManager = () => {
 
 <button className='btn-default-cupom' onClick={criarCupom}>Gerar cupom</button>
     </div>
-
+    </div>
     </>)
 }
 

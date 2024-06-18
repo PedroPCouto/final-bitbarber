@@ -116,7 +116,7 @@ const Contract = () => {
        <>
        <Navbar/>
        <div className='service-selector animate__fadeInDown animate__animated'>
-        <h1>Escolha um serviço</h1>
+        <h1 className='color-white-style'>Escolha um serviço</h1>
             <div className='service-cards-container'>
             <Card image={corte} title="Corte" isSelected={"Corte" === service} identifier="Corte" selectService={selectService}/>
             <Card image={barba} title="Barba" isSelected={"Barba" === service} identifier="Barba" selectService={selectService}/>
@@ -124,7 +124,7 @@ const Contract = () => {
             </div>
         </div>
        <div className='service-selector animate__fadeInDown animate__animated'>
-        <h1>Escolha um profissional</h1>
+        <h1 className='color-white-style'>Escolha um profissional</h1>
             <div className='service-cards-container'>
             {dadosIniciais && dadosIniciais.map((barbeiroData, index) => {
                 return(
@@ -134,13 +134,13 @@ const Contract = () => {
             </div>
         </div>
         <div className='service-selector animate__fadeInDown animate__animated'>
-        <h1>Escolha uma data</h1>
+        <h1 className='color-white-style'>Escolha uma data</h1>
             <div className='service-cards-container'>
                 <CalendarDatePicker handler={handleDateChange}/>
             </div>
         </div>
         <div className='service-selector animate__fadeInDown animate__animated'>
-            <h1>Escolha um horário</h1>
+            <h1 className='color-white-style'>Escolha um horário</h1>
             <div className='service-cards-container'>
                 <TimePicker agendaBarbeiro={dadosAgenda} selectHorario={setHorario}/>
             </div>

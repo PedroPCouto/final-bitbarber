@@ -69,6 +69,7 @@ const Indicadores = () => {
     }
 
     return(<>
+        <div className="body-cupom-manager">
         <Navbar/>
         <div className="master-container">
             <h2>Quantidade Clientes Cadastrados / Meta: 50 por ano</h2>
@@ -92,8 +93,8 @@ const Indicadores = () => {
                     ],
                     },
                 ]}
-                width={400}
-                height={200}
+                width={360}
+                height={180}
             />
         </div>
         <div className="master-container">
@@ -108,8 +109,8 @@ const Indicadores = () => {
                     ],
                     },
                 ]}
-                width={400}
-                height={200}
+                width={360}
+                height={180}
             />
         </div>
         <div className="master-container">
@@ -124,7 +125,7 @@ const Indicadores = () => {
             /> 
         </div>
 
-
+        </div>
     </>)
 }
 

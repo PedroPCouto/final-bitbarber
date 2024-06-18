@@ -13,10 +13,10 @@ const CupomPicker = ({cupons, setSelectedCupom}) => {
         setSelectedCupom(selectedCupom.codigoCupom);
     }
 
-    if(cupons === null) return null;
+    if(cupons === null || cupons?.length === 0) return null;
     return (        
     <div className='service-selector animate__fadeInDown animate__animated'>
-        <h1>Escolha um cupom</h1>
+        <h1 className='color-white-style'>Escolha um cupom</h1>
         <div className='service-cards-container'>
             {cupons && cupons.map((cupom, index) => {
                 return(
