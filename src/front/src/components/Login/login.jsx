@@ -18,7 +18,7 @@ const Login = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         const email = document.getElementById("username").value;
-        let dominio = "http://18.217.70.108:8080/";
+        let dominio = "http://3.144.215.154:8080/";
         if(email.indexOf('@bitbarberadmin')>=0){
             dominio = dominio + "gerente/";
         } else {

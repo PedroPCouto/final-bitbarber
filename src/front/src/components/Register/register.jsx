@@ -142,7 +142,7 @@ const Register = () => {
             senha: password,
         }
 
-        fetch('http://18.217.70.108:8080/cliente/register', {
+        fetch('http://3.144.215.154:8080/cliente/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
