@@ -34,6 +34,7 @@ public class CupomService {
             cupom.setDesconto(dto.getDesconto());
             cupom.setNomeCupom(dto.getNomeCupom());
             cupom.setDataExpiracao(dto.getDataCupom());
+            cupom.setUsado(false);
             cupons.add(cupom);
         }
         repository.saveAll(cupons);
